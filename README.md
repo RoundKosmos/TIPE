@@ -1,6 +1,5 @@
 # TIPE
-Ceci est mon projet de TIPE de 2025 sur le thème "Cycles Et Boucles".
-Le sujet est l'impacte d'une ligne de métro en boucle sur l'affluence du traffic ferroviaire.
+Ceci est mon projet de TIPE de 2025 sur le thème "Cycles Et Boucles". Le sujet est l'impacte d'une ligne de métro en boucle sur l'affluence du traffic ferroviaire.
 <br> Programmation en python (possiblement en ocaml a la fin de l'année).
 <br>
 <br> On suppposera initialement que les changements de ligne sont instantanées et donc que chaque ligne est confondue
@@ -11,4 +10,8 @@ Pour jusifier la programmation en POO des graphes on utilisera ces articles trou
 * [Site de recherche ou les graphes sont en POO](http://www.jmlr.org/papers/v21/19-187.html)
 * [Site utlisant les Classes poour programmer graphes](https://ieeexplore.ieee.org/abstract/document/9402076)
                     
-
+<br> article possiblement intéressante :
+* [Thèse qui modélise 2 lignes de métro et la congestion](https://theses.hal.science/tel-01795497/)
+* [Thèse avec deeplearning pour prévoir traffic](https://theses.hal.science/tel-02496955/)
+* [Collection de thèse sur le traffic ferriovaire](https://theses.hal.science/search/index/q/*/keyword_t/Trafic%20ferroviaire)
+* [Colection de thèse sur la congestion](https://theses.hal.science/search/index/q/*/keyword_t/Congestion)
