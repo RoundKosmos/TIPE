@@ -15,3 +15,5 @@ Pour jusifier la programmation en POO des graphes on utilisera ces articles trou
 * [Thèse avec deeplearning pour prévoir traffic](https://theses.hal.science/tel-02496955/)
 * [Collection de thèse sur le traffic ferriovaire](https://theses.hal.science/search/index/q/*/keyword_t/Trafic%20ferroviaire)
 * [Colection de thèse sur la congestion](https://theses.hal.science/search/index/q/*/keyword_t/Congestion)
+
+<br> [Justification de l'utilisation du degré de correlation de Pearson](https://www.statisticssolutions.com/free-resources/directory-of-statistical-analyses/pearsons-correlation-coefficient/)
