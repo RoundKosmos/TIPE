@@ -6,11 +6,11 @@ class Noeuds :
     self.name = nom
     self.degre = len(voisins)
 
-  def name_neighbor(self):
+  def name_neighbour(self):
     """renvoie le nom de tous les voisins du noeud"""
     return [n.name for n in self.voisins]
 
-  def new_nods(self, nod):
+  def new_neighbour(self, nod):
     """ nod est un Noeud
     ajoute un nouveau noeud parmi les voisins"""
     self.voisins.append(nod)
@@ -23,6 +23,9 @@ class Graphe :
     self.nb = len(noeuds)
     self.noeuds = noeuds
 
+  def app_n(self, noeud:Noeuds) :
+    """Rajoute a la liste de noeuds composant le graphe noeud"""
+    self.noeuds.append(noeud)
   
   def nods_degs(self) :  """
   renvoie tout les noeuds composant le graphe avec leur degré (Noeuds, int) """
@@ -31,5 +34,22 @@ class Graphe :
       nods.append( (n, n.degre))
     return nods
         
-  def cor_pearson(self) : #Calcule le degré de corrélation de Pearson du graphe
+  #def cor_pearson(self) : #Calcule le degré de corrélation de Pearson du graphe
+
+
+if __name__ == "__main__" :
+  Shibuya = Noeuds([Omote_sando], shibuya)
+  Omote_sando = Noeuds([Shibuya, Gaiemmae], omote_sando)
+  Gaiemmae = Noeuds([Omote_sando,Aoyama_itchome], gaiemmae)
+  Aoyama_itchome = Noeuds([Gaiemmae,Akasaka_mitsuke], aoyama_itchome)
+  Akasaka_mitsuke = Noeuds([Aoyama_itchome], akasaka_mitsuke)
+  Ginza = Graphe([Shibuya, Omote_sando, Gaiemmae, Aoyama_itchome, Akasaka_mitsuke])
+  
+  print(Gaiemmae.name_neighbour())
+  print(Ginza.nods_degs())
+  Tameike_sanno = Noeuds([Akasaka_mitsuke], tameike_sanno)
+  Akasaka_mitsuke.new_neighbour(Tameike_sanno)
+  
+  print(Akasaka_mistune.name_neighbour())
+  print(Ginza.nods_degs())
     
