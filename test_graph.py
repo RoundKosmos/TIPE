@@ -17,10 +17,9 @@ class Noeuds :
     if nod.name not in moi.name_neighbour() :
         self.voisins.append(nod)
         self.degre += 1
-        self.ligne.app_n(nod)
         
     #reciprocite de la relation voisin
-    if moi.name not in nod.name_neighbour() :
+    if not moi.name in nod.name_neighbour() :
         nod.new_neighbour(nod, moi)
     
 
@@ -31,10 +30,12 @@ class Graphe :
     self.nb = len(noeuds)
     self.noeuds = noeuds
 
-  def app_n(self, noeud:Noeuds) :
+  def app_n(self, moi : Noeuds, nod:Noeuds) :
     """Rajoute a la liste de noeuds composant le graphe noeud"""
-    self.noeuds.append(noeud)
-    self.nb += 1
+    if nod.name not in self.noeuds :
+      self.noeuds.append(nod)
+      self.nb += 1
+      nod.new_neighbour( nod, moi)
   
   def nods_degs(self) :
     """renvoie tout les noeuds composant le graphe avec leur degré (Noeuds, int) """
@@ -54,13 +55,18 @@ if __name__ == "__main__" :
   Aoyama_itchome = Noeuds([Gaiemmae], "Aoyama_itchome", Ginza)
   Akasaka_mitsuke = Noeuds([Aoyama_itchome], "Akasaka_mitsuke", Ginza)
   ligne = [Shibuya, Omote_sando, Gaiemmae, Aoyama_itchome, Akasaka_mitsuke]
-  for n in ligne :
-      Ginza.app_n(n)
+  for n in range(len(ligne)) :
+      Ginza.app_n(ligne[(n + 1)% len(ligne)] , ligne[n])
+      #ligne[n].new_neighbour(ligne[n], ligne[n + 1])
   
   print(Gaiemmae.name_neighbour())
   print(Ginza.nods_degs())
   Tameike_sanno = Noeuds([Akasaka_mitsuke], "Tameike_sanno", Ginza)
-  Akasaka_mitsuke.new_neighbour(Akasaka_mitsuke, Tameike_sanno)
+  Ginza.app_n(Akasaka_mitsuke, Tameike_sanno)
   
+  #Akasaka_mitsuke.new_neighbour(Akasaka_mitsuke, Tameike_sanno)
+   
   print(Akasaka_mitsuke.name_neighbour())
   print(Ginza.nods_degs())
+
+  # ATTENTION APP_N RAJOUTE 2 liaison dans LE graphe DANS LE GRAPHE, A REGLER D'URGENCE
