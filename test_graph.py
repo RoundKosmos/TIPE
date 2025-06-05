@@ -2,7 +2,7 @@ class Noeuds :
   def __init__(self, voisins:[], nom:str, ligne = None) : 
     """voisins est la liste de tous les noeuds adjacents
     nom le nom du noeud """
-    self.voisins = voisins
+    self.voisins = voisins 
     self.name = nom
     self.degre = len(voisins)
     self.ligne = ligne
