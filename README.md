@@ -1,6 +1,11 @@
 # TIPE
 Ceci est mon projet de TIPE de 2025 sur le thème "Cycles Et Boucles". Le sujet est l'impacte d'une ligne de métro en boucle sur l'affluence du traffic ferroviaire.
 <br> Programmation en python (possiblement en ocaml a la fin de l'année).
+<br> Objectif :
+* Modelisation d'un graphe
+* Mise a jour d'un graphe
+* Calcul de ~"l'eficacité" du graphe (coeff de Pearson)
+* Modelisation graphique (++ la rendre interactive <- vraiment optionel)
 <br>
 <br> On suppposera initialement que les changements de ligne sont instantanées et donc que chaque ligne est confondue
 <br> 
