@@ -6,8 +6,11 @@ Ceci est mon projet de TIPE de 2025 sur le thème "Cycles Et Boucles". Le sujet 
 * Mise a jour d'un graphe
 * Calcul de ~"l'eficacité" du graphe (coeff de Pearson)
 * Modelisation graphique (++ la rendre interactive <- vraiment optionel)
+
+<br> 
+On suppposera initialement que les changements de ligne sont instantanées et donc que chaque ligne est confondue
 <br>
-<br> On suppposera initialement que les changements de ligne sont instantanées et donc que chaque ligne est confondue
+
 <br> Pour jusifier la programmation en POO des graphes on utilisera ces articles trouvé sur google scholar :
 * [Université de lyon, NSI](https://math.univ-lyon1.fr/irem/Formation_ISN/formation_parcours_graphes/largeur/3_python1.html) 
 * NetworkX : Network Analysis with Python by Salvatore Scellato
